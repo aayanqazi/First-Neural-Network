@@ -17,4 +17,4 @@ Several constraints were placed on the selection of these instances from a large
 8. Age (years) 
 9.  Diabetes Variable (1 for yes OR 0 For NO )
 
-![Screenshot](screenshot.png)
+![screenshot](screenshot.PNG)
