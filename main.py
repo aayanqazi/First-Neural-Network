@@ -18,10 +18,15 @@ model.add(Dense(1,activation='sigmoid'))
 # **** Compile Modal ****
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 model.fit(X,Y,epochs=150 , batch_size=10, verbose=2)
+
+# **** EVALUATES Result ****
+scores = model.evaluate(X, Y)
+print("\n%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
+
 # **** Custom Data ****
 data = numpy.array([[1,126,60,0,0,30.1,0.349,47],[1,85,66,29,0,26.6,0.351,31]])
 # **** Prediction ****
 predictions = model.predict(data)
 rounded = [round(x[0]) for x in predictions]
 
-print(rounded)
+print("PREDICTED DATA", rounded)
